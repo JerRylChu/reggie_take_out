@@ -8,3 +8,7 @@ java开发康复训练
 + 实体类entity创建,mapper,service和controller三层架构的搭建
 + 配置类的构建和注解
 + 员工登录和登出
+## 2024.3.3
++ 过滤器配置，根据规则拦截访问，包括注解@WebFilter和@ServletComponentScan的使用
++ 新增员工功能
++ 配置全局异常处理的方法（AOP）
