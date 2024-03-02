@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: reggie_take_out
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/reggie?serverTimeZone=Asia/Shanghai&userUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#  main:
+#    allow-bean-definition-overriding: true
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，开启按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
