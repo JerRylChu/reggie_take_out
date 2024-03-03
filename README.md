@@ -1,6 +1,6 @@
 # reggie_take_out
 java开发康复训练
-## 2024.3.2
+## 2024.3.1
 + jdk,mysql,maven安装和配置
 + idea,navicat,postmanan安装
 + idea创建maven项目，pom.xml添加依赖
@@ -8,7 +8,12 @@ java开发康复训练
 + 实体类entity创建,mapper,service和controller三层架构的搭建
 + 配置类的构建和注解
 + 员工登录和登出
-## 2024.3.3
+## 2024.3.2
 + 过滤器配置，根据规则拦截访问，包括注解@WebFilter和@ServletComponentScan的使用
 + 新增员工功能
-+ 配置全局异常处理的方法（AOP）
++ 配置全局异常处理的方法（AOP），@ControllerAdvice和@ExceptionHandler
+## 2024.3.3
++ 配置mybatis-plus拦截器
++ mybatis-plus实现员工分页查询功能，包括分页构造器、条件构造器以及过滤条件和排序条件的设置
++ 禁用和启用员工，根据id查询员工信息
++ Jackson进行序列化和反序列化（在MVC中扩展自定义的消息转换器）
