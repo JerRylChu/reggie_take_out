@@ -57,12 +57,13 @@ public class EmployeeController {
     public Result<String> save(HttpSession session, @RequestBody Employee employee){
         log.info("新增员工，员工信息：{}", employee.toString());
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
 
-        Long empId = (Long)session.getAttribute("employee");
-        employee.setCreateUser(empId);
-        employee.setUpdateUser(empId);
+//        employee.setCreateTime(LocalDateTime.now());
+//        employee.setUpdateTime(LocalDateTime.now());
+
+//        Long empId = (Long)session.getAttribute("employee");
+//        employee.setCreateUser(empId);
+//        employee.setUpdateUser(empId);
 
         employeeService.save(employee);
         return Result.success("新增员工成功");
@@ -96,8 +97,8 @@ public class EmployeeController {
     @PutMapping
     public Result<String> update(HttpSession session, @RequestBody Employee employee){
         log.info(employee.toString());
-        employee.setUpdateTime(LocalDateTime.now());
-        employee.setUpdateUser((Long) session.getAttribute("employee"));
+//        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setUpdateUser((Long) session.getAttribute("employee"));
         employeeService.updateById(employee);
         return Result.success("员工信息修改成功");
     }
